@@ -12,7 +12,8 @@ func Router() *http.ServeMux{
   SM := http.NewServeMux()
 
   // Register all handlers to the serve mux.
-  SM.HandleFunc("/", handlers.HomeTest)
+  SM.HandleFunc("/", handlers.Routes["/"])
+  SM.HandleFunc("/login", handlers.Routes["/login"])
 
   // Return SM.
   return SM
